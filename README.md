@@ -1,38 +1,120 @@
-Survey of Data Professionals
-PowerBI Interactive Dashboard
+# Data Professional Survey Analysis | SQL & Power BI
 
-Survey of Data Professionals Interactive dashboard where you can filter survey takers by country. The countries you can filter through are Canada, India, United States, United Kingdom or Other.
+This project analyzes 600+ responses from a Data Professionals Survey to understand salary trends, tool usage, learning paths, and job satisfaction.  
+SQL was used for data cleaning, feature engineering, and exploratory analysis.  
+Power BI was used to build an interactive dashboard highlighting high-paying roles, popular tools, and major skill gaps.
 
-In this report I will analyse the data of the data professionals, to have an understanding of the professionals in this industry. Number of survey takers 630, average age of survey taker is 30.
-I will mention:
-Survey of takers by country.
-Favourite programming languages their like to use or have used.
-Number of survey takers and average age of survey taker.
-Happiness rate with work/life balance.
-Average salary by job title.
-Difficulty to break into Data.
-Software used:
+---
 
-Microsoft PowerBI: To clean the data, analysing the data and build charts and then a dashboard.
+## Objective
+- Process and clean survey responses using SQL.
+- Analyze salary, tools, experience, certifications, and job satisfaction.
+- Build a Power BI dashboard to visualize trends and insights.
+- Identify high-paying roles, commonly used tools, and areas where professionals lack key skills.
 
-Charts Used: Treemap, Table Chart, Card x2, Gauge, Bar Chart and Funnel Chart.
+---
+
+## Dataset
+The dataset contains 600+ survey responses with fields including:
+- Demographics  
+- Education  
+- Experience  
+- Domain Roles  
+- Technical Skills  
+- Tools Used  
+- Salary (INR)  
+- Job Satisfaction  
+- Certifications  
+- Projects  
+- Work Hours  
+- Comments  
+
+File: `data_careers_medium_dataset.csv`
+
+---
+
+## Tech Stack
+- PostgreSQL (SQL)
+- Power BI
+- Excel / CSV
+- GitHub for version control
+
+---
+
+## SQL Workflow
+
+### 1. Data Cleaning
+- Removed duplicates
+- Standardized null values
+- Normalized text fields
+- Cleaned tool usage fields
+- Added experience-level categories
+
+### 2. Feature Engineering
+- Extracted Python/SQL/Power BI/Excel usage from text columns
+- Categorized experience into Junior, Mid, Senior
+- Created tool usage flags for dashboard
+
+### 3. SQL Analysis Performed
+- Salary analysis by role, experience, and city
+- Tool popularity metrics
+- Certification impact on performance
+- Work-life balance vs working hours
+- Comments sentiment indicators (e.g., “Stressful”)
+
+SQL scripts are available in the `/sql` folder.
+
+---
+
+## Power BI Dashboard
+
+The dashboard provides:
+- Highest Paying Roles
+- Salary by Experience Level
+- Most Popular Tools (Python, SQL, Power BI, Excel)
+- Certifications vs Performance
+- Work-Life Balance Metrics
+- Skill Gap Identification
+- Distribution of Job Satisfaction
+
+Dashboard file: `/powerbi/dashboard.pbix`
+
+Screenshots included in `/powerbi/dashboard_screenshots/`.
+
+---
+
+## Key Insights
+- Senior professionals earn significantly more compared to juniors.
+- Data Engineers and ML Engineers appear among the highest-paying roles.
+- Python, SQL, and Power BI are the most widely used tools.
+- Higher certification counts correlate with better performance scores.
+- Respondents working more than 48 hours per week reported lower work-life balance.
+- Comments containing the word “Stressful” correlated with higher overtime frequency.
+
+---
+
+## How to Run
+1. Import `data_careers_medium_dataset.csv` into PostgreSQL.
+2. Run SQL scripts in the following order:
+   - `01_data_cleaning.sql`
+   - `02_feature_engineering.sql`
+   - `03_analysis_queries.sql`
+3. Load the cleaned dataset into Power BI.
+4. Build visuals using fields described in the dashboard section.
+
+---
+
+## Future Improvements
+- Add prediction model for salary ranges
+- Deploy interactive dashboard online
+- Add NLP sentiment analysis on comments
+
+---
+
+## 
+Hemesh Baratam  
+Data Analytics & Machine Learning Enthusiast
 
 
-Dashboard filter settings with survey takers by Country
-
-The survey is filtered by the United Kingdom. The average salary among data professionals in the United Kingdom that are Data Engineers earn on average 47K. The favourite programming language used in the United Kingdom is Python 24 out of 40 survey takers voted.
-
-Summary
-In this report I analysed the survey results on:
-Survey of takers by country.
-Favourite programming languages their like to use or used.
-Number of survey takers and average age of survey taker.
-Happiness rate with work/life balance.
-Average salary by job title.
-Difficulty to break into Data.
-
-When it comes to the difficulty of breaking into the data industry. Overall Data professionals found it neither easy nor difficult came in at 42.70%. In the United Kingdom this came in at 25%. The most favoured programming language used amongst data
-professionals is Python this is also the same in the United Kingdom. The happiness rate with work/life balance is just over average, with a rating of 5.74 out of 10 it is 5.84 in the United Kingdom. 
-The average salary among data professionals in the United Kingdom that are Data Analysts earn on average 47K.
 
 
